@@ -23,16 +23,33 @@ angular.module('starter', ['ionic'])
 .config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider){
   $stateProvider
-    .state('home',
-        {
-          url: "/home",
-          views: {
-            'appContent': {
-              templateUrl: 'templates/home.html',
-              controller: 'HomeCtrl'
-            }
-          }
-        });
 
-    $urlRouterProvider.otherwise('/home');
+    .state('app',{
+      url:'/app',
+      abstract: true,
+      templateUrl:"componentes/_common/menu.html",
+      controller:'AppCtrl'
+    })
+
+    .state('app.home',{
+        url: "/home",
+        views: {
+          'appContent': {
+            templateUrl: 'componentes/home/home.html',
+            controller: 'HomeCtrl'
+          }
+        }
+      })
+
+    .state('app.localizacao',{
+        url: "/localizacao",
+        views: {
+          'appContent': {
+            templateUrl: 'componentes/localizacao/localizacao.html',
+            controller: 'LocalizacaoCtrl'
+          }
+        }
+      });
+
+    $urlRouterProvider.otherwise('/app/home');
 }])
