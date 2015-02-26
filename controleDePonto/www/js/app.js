@@ -5,7 +5,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic', 'ngCordova'])
 
 .run(['$ionicPlatform', function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -37,6 +37,16 @@ angular.module('starter', ['ionic'])
           'appContent': {
             templateUrl: 'componentes/home/home.html',
             controller: 'HomeCtrl'
+          }
+        }
+      })
+
+    .state('app.ponto',{
+        url: "/ponto",
+        views: {
+          'appContent': {
+            templateUrl: 'componentes/ponto/add_ponto.html',
+            controller: 'PontoCtrl'
           }
         }
       })

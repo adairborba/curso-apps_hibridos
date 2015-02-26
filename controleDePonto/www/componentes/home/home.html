@@ -1,7 +1,13 @@
 <ion-view title="Controle de ponto">
 	<ion-content>
+
+		<button class="button button-block button-balanced" ng-click="add()">Adicionar ponto</button>
+
+		<div class="card">
+			<input type="text" ng-model="search">
+		</div>
 		<ul class="list">
-			<li class="item" ng-repeat="item in lista">
+			<li class="item" ng-repeat="item in list | filter:search">
 				{{::item.id}}
 			</li>
 		</ul>
