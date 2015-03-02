@@ -57,10 +57,6 @@ angular.module('starter', ['ionic', 'ngCordova'])
           'appContent': {
             templateUrl: 'componentes/localizacao/localizacao.html',
             controller: 'LocalizacaoCtrl'
-<<<<<<< HEAD
-          }
-        }
-=======
           }
         }
       })
@@ -72,7 +68,6 @@ angular.module('starter', ['ionic', 'ngCordova'])
                   controller: 'PontoDetailCtrl'
               }
           }
->>>>>>> 8c272ee97202967b429c87dc82bd0fcc9ddd8014
       });
 
     $urlRouterProvider.otherwise('/app/home');

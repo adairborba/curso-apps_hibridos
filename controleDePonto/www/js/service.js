@@ -7,18 +7,11 @@ angular.module('starter')
 		var list = [];
 
 		this.add = function(callback){
-<<<<<<< HEAD
-			navigator.geolocation.getCurrentPosition(function(pos){
-				list.push({
-					id: _.uniqueId(),
-					date: Date.now(),
-=======
             console.dir("add");
 			navigator.geolocation.getCurrentPosition(function(pos){
 				list.push({
 					id: _.uniqueId(),
 					date: moment().format('DD/MM/YYYY'),
->>>>>>> 8c272ee97202967b429c87dc82bd0fcc9ddd8014
 					photo: '',
 					geo: pos.coord
 				});
@@ -34,12 +27,9 @@ angular.module('starter')
 		this.getAll = function(){
 			return list;
 		}
-<<<<<<< HEAD
-=======
 
         this.getPonto = function(id){
             console.dir("ponto");
             return _.find(list,{'id':id});
         }
->>>>>>> 8c272ee97202967b429c87dc82bd0fcc9ddd8014
 	});
