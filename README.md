@@ -9,10 +9,15 @@ O aplicativo será gratuito com monetização através do AdMob.
 - [ ] Cadastro do local de trabalho
 - [ ] Cadastro de imagens de ponto
 - [ ] Alerta de acordo com geolocalização
-- [ ] Pesquisa de pontos por dia
 - [ ] Persistência utilizando PouchDB
 - [x] Side menu para navegação (fixo no tablet)
 - [ ] Exibir de anúncios do AdMob
+
+
+- [x] Exibir ponto
+- [x] Buscar ponto por data
+- [x] Order lista de forma decrescente
+
 
 ### Tecnologias
 
