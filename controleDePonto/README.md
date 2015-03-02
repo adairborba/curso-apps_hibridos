@@ -14,6 +14,12 @@ O aplicativo será gratuito com monetização através do AdMob.
 - [x] Side menu para navegação (fixo no tablet)
 - [ ] Exibir de anúncios do AdMob
 
+### Terceira Aula
+
+- [x] Exibir ponto
+- [x] Buscar ponto por data
+- [x] Order lista de forma decrescente
+
 ### Tecnologias
 
 - [AngularJS](https://angularjs.org/)
