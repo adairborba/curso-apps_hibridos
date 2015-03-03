@@ -1,7 +1,16 @@
 <ion-view view-title="Title">
     <ion-content class="padding">
         <p>
-            {{ponto.id}}-{{ponto.photo}}-{{ponto.date | date:'dd-MM-yyyy'}}-{{ponto.geo}}
+            {{ponto._id}}
+        </p>
+        <p>
+        	{{ponto.photo}}
+        </p>
+        <p>
+        	{{ponto.date}}
+        </p>
+        <p>
+        	{{ponto.geo}}
         </p>
     </ion-content>
 </ion-view>

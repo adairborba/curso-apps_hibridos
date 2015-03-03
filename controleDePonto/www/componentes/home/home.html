@@ -6,14 +6,9 @@
 		<div class="card">
             <input type="text" ng-model="search">
 		</div>
-        <!--<ul class="list">
-			<li class="item" ng-repeat="item in list | filter:search | orderBy: 'date' : reverse=true" href="#/app/pontodetail/{{item.id}}">
-				{{::item.id}} - {{item.date | date:'dd-MM-yyyy'}}
-			</li>
-		</ul>-->
         <ion-list>
-            <ion-item class="item-remove-animate item-icon-right" ng-repeat="item in list | filter:search | orderBy:'id':reverse=true" type="item-text-wrap" href="#/app/pontodetail/{{item.id}}">
-                {{::item.id}} - {{item.date}} <!-- | date:'dd-MM-yyyy'-->
+            <ion-item class="item-remove-animate item-icon-right" ng-repeat="item in list | filter:search | orderBy:'date':reverse=true" type="item-text-wrap" href="#/app/pontodetail/{{::item._id}}">
+                {{::item.date}} - {{::item._id}} <!-- | date:'dd-MM-yyyy'-->
             </ion-item>
         </ion-list>
 	</ion-content>

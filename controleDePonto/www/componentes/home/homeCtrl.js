@@ -3,12 +3,18 @@
 angular.module('starter')
 	.controller('HomeCtrl',['$scope', 'pontos',
 		function($scope, pontos){
-			$scope.list = pontos.getAll();
+			pontos.getAll().then(function(data){
+				$scope.list = _.pluck(data.rows, 'doc');
+			});
 
 			$scope.add = function(){
-				pontos.add(function(){
-					$scope.$apply();
+				pontos.add(function(item){
+					$scope.list.unshift(item);
 				});
 			}
+
+			function onChange(change) {
+		      $scope.docs.push(change);
+		    }
 		}
 	]);

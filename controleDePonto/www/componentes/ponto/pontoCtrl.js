@@ -7,6 +7,8 @@ angular.module('starter')
 	])
     .controller('PontoDetailCtrl', ['$scope', '$stateParams', 'pontos',
         function($scope, $stateParams, pontos) {
-            $scope.ponto = pontos.getPonto($stateParams.pontoId);
+            pontos.getPonto($stateParams.pontoId).then(function(item){
+            	$scope.ponto = item;
+            });
         }
     ]);
